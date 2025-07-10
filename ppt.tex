@@ -1,0 +1,189 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme[progressbar=frametitle, titleformat=smallcaps, numbering=fraction]{metropolis}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{referencias.bib}
+
+\definecolor{customgreen}{RGB}{0,120,90}
+\setbeamercolor{frametitle}{bg=customgreen, fg=white}
+\setbeamercolor{progress bar}{fg=customgreen}
+\setbeamercolor{title}{fg=customgreen}
+\setbeamercolor{author}{fg=black}
+\setbeamercolor{date}{fg=gray}
+
+\title{Escasez de Agua en Zonas Rurales del Sur de Chile}
+\subtitle{INFO1169 - Teoría de Sistemas}
+\institute{Universidad Católica de Temuco}
+\date{\today}
+
+% No mostrar nombres abajo en cada slide
+\author{} % <-- vaciar autor aquí
+
+\begin{document}
+
+% Portada personalizada con formato mejorado
+\begin{frame}[plain]
+  \vspace*{1.5cm}
+  \begin{center}
+      \textbf{\large Universidad Católica de Temuco}\\[0.3cm]
+    {\usebeamercolor[fg]{title}\Huge \textbf{Escasez de Agua en Zonas Rurales del Sur de Chile}}\\[0.7cm]
+
+  \end{center}
+  \vfill
+  \begin{flushright}
+    \textbf{Integrantes:} \\
+    Daniel Felipe Peña Bascur \\
+    Daniel Burgos \\
+    Jorge Soto \\[0.2cm]
+    \textbf{Profesor:} Elliott Jamil Mardones Arias \\[0.2cm]
+    \textbf{\today}
+  \end{flushright}
+\end{frame}
+
+% Ahora reiniciamos el autor vacío para que no aparezca en cada slide
+\author{}
+
+% A partir de aquí, slides normales
+\begin{frame}{Resumen}
+La escasez de agua es un fenómeno creciente que afecta a comunidades rurales del sur de Chile. Este estudio modela la dinámica del problema usando simulaciones en Vensim, considerando políticas de mitigación como captación de aguas lluvias.
+
+Los resultados indican que sin intervención, la disponibilidad disminuirá significativamente. La implementación de soluciones permite estabilizar el sistema y mejorar el acceso al agua.
+\end{frame}
+
+% Introducción
+\begin{frame}{Introducción}
+\begin{itemize}
+    \item Disminución de precipitaciones y aumento en consumo agrícola.
+    \item Afectación directa a APR en regiones como La Araucanía.
+    \item Uso de dinámica de sistemas para comprender y simular el fenómeno.
+    \item Herramienta utilizada: Vensim.
+\end{itemize}
+\end{frame}
+
+% Desarrollo (slide de sección mejorada)
+
+% Slide de sección: Desarrollo
+{
+\setbeamercolor{block title}{bg=customgreen, fg=white}
+\setbeamercolor{block body}{bg=white, fg=black}
+\begin{frame}[plain]
+    \vspace*{1.5cm}
+    \begin{center}
+        \begin{beamercolorbox}[rounded=true, shadow=true, sep=2em, wd=0.9\textwidth]{block title}
+            {\fontsize{36pt}{40pt}\selectfont \textbf{Desarrollo}}
+        \end{beamercolorbox}
+        \vspace{1cm}
+        {\Large En esta sección se presenta el proceso de modelado, variables clave, relaciones causales, calibración y simulaciones del sistema hídrico rural.}
+    \end{center}
+\end{frame}
+}
+
+% Definición del Problema
+\begin{frame}{Definición del Problema}
+La escasez de agua en comunidades rurales del sur de Chile representa una amenaza creciente para la seguridad hídrica, la salud pública y la sostenibilidad territorial. La disminución de las precipitaciones, el aumento de la demanda agrícola y la insuficiencia de infraestructura de captación y distribución generan un desequilibrio en la oferta y demanda del recurso hídrico.
+\end{frame}
+
+% Variables del Sistema
+\begin{frame}{Variables del Sistema}
+A continuación, se presentan las principales variables consideradas en este estudio, clasificadas según su rol en el modelo de dinámica de sistemas: variables de nivel, de flujo y auxiliares.
+
+\textbf{Variables de Nivel (Stock):}
+\begin{itemize}
+    \item \textit{Disponibilidad de Agua}: volumen total acumulado del recurso hídrico en el sistema.
+\end{itemize}
+
+\textbf{Variables de Flujo:}
+\begin{itemize}
+    \item \textit{Precipitaciones}: flujo de entrada natural de agua al sistema.
+    \item \textit{Captación de Aguas Lluvias}: flujo adicional generado por tecnologías de recolección.
+    \item \textit{Consumo Agrícola}: volumen mensual de agua utilizado por el sector agrícola.
+    \item \textit{Consumo Humano}: volumen mensual de agua demandado por las comunidades rurales.
+    \item \textit{Migración Rural}: flujo de salida de población que abandona el sistema APR por escasez.
+\end{itemize}
+
+\textbf{Variables Auxiliares:}
+\begin{itemize}
+    \item \textit{Cambio Climático}: factor externo que afecta negativamente las precipitaciones.
+    \item \textit{Producción Agrícola}: influencia sobre la demanda hídrica del sector rural productivo.
+    \item \textit{Consumo Per Cápita}: parámetro que determina la demanda individual de agua.
+    \item \textit{Inversión en Captación}: cantidad de recursos destinados a sistemas de recolección de aguas lluvias.
+    \item \textit{Umbral Crítico}: punto mínimo de disponibilidad que activa la migración rural.
+    \item \textit{Población Rural dependiente del APR}: cantidad de personas sujetas a condiciones del sistema APR, afecta el consumo humano.
+\end{itemize}
+\end{frame}
+
+% Relaciones Causales y Retroalimentaciones
+\begin{frame}{Relaciones Causales y Retroalimentaciones}
+Se identifican dos tipos principales de bucles de retroalimentación:
+\begin{itemize}
+    \item \textbf{Bucle positivo de degradación:} una menor disponibilidad de agua reduce la productividad agrícola, lo que provoca migración rural, disminución de la inversión y abandono de infraestructura, lo que refuerza el deterioro del sistema.
+    \item \textbf{Bucle negativo de mitigación:} el aumento en la inversión en captación de aguas lluvias incrementa la oferta, mejora el acceso y reduce la presión sobre fuentes naturales.
+\end{itemize}
+\end{frame}
+
+% Diagrama de Forrester Conceptual
+\begin{frame}{Diagrama de Forrester Conceptual}
+El modelo se basa en un diagrama causal con acumuladores que representan la disponibilidad total de agua, los flujos de entrada (precipitaciones, captación) y salida (consumo agrícola y humano). Implementado en Vensim.
+
+\begin{center}
+\includegraphics[width=0.7\linewidth]{images/diagrama_forrester.png}
+\end{center}
+\end{frame}
+
+% Calibración y Datos Históricos
+\begin{frame}{Calibración y Datos Históricos}
+Para la calibración del modelo se usaron datos de precipitaciones anuales (Dirección Meteorológica de Chile), consumo agrícola (INE) y reportes de la DOH. Las unidades fueron normalizadas a tasas mensuales para simular un periodo de 10 años.
+\end{frame}
+
+% Simulación del Estado Actual del Sistema
+\begin{frame}{Simulación del Estado Actual del Sistema}
+La simulación sin intervención muestra una tendencia decreciente en la disponibilidad de agua, con una caída significativa a partir del quinto año, especialmente en condiciones de sequía prolongada.
+
+\begin{center}
+\includegraphics[width=0.7\linewidth]{images/simulacion_actual.png}
+\end{center}
+\end{frame}
+
+% Resultados (slide de sección)
+\begin{frame}[plain]
+    \centering
+    {\Huge \textbf{Resultados}}
+\end{frame}
+
+% Escenario Base: Sin Intervención
+\begin{frame}{Escenario Base: Sin Intervención}
+La simulación del sistema sin intervención evidencia una disminución sostenida en la disponibilidad de agua durante un período de 10 años. Este descenso está directamente relacionado con la reducción de precipitaciones y el constante aumento del consumo agrícola, lo que genera una presión insostenible sobre las fuentes naturales.
+\end{frame}
+
+% Escenario de Intervención: Captación de Aguas Lluvias
+\begin{frame}{Escenario de Intervención: Captación de Aguas Lluvias}
+La política propuesta consiste en la implementación gradual de sistemas de captación de aguas lluvias a nivel domiciliario, con financiamiento estatal y comunitario. Esta intervención aumenta la oferta hídrica disponible, reduciendo la dependencia de fuentes naturales.
+
+La simulación del escenario con intervención muestra una estabilización progresiva de la disponibilidad de agua, especialmente a partir del tercer año, cuando la mayoría de los hogares han instalado los sistemas de captación.
+\end{frame}
+
+% Comparación de Escenarios
+\begin{frame}{Comparación de Escenarios}
+Se evidencia que la intervención mitiga de forma significativa la pérdida de agua disponible, logrando mantenerla por sobre los niveles mínimos de abastecimiento durante todo el periodo simulado. Esto mejora la resiliencia de las comunidades rurales frente a condiciones climáticas adversas.
+\end{frame}
+
+% Conclusiones
+\begin{frame}{Conclusiones}
+\begin{itemize}
+    \item La dinámica de sistemas permite modelar fenómenos complejos.
+    \item Sin intervención, el sistema colapsa.
+    \item La captación de aguas lluvias es efectiva.
+    \item Se recomienda incorporar factores socioeconómicos y datos geoespaciales a futuro.
+\end{itemize}
+\end{frame}
+
+% Bibliografía (si usas referencias)
+\begin{frame}[allowframebreaks]{Referencias}
+\printbibliography
+\end{frame}
+
+\end{document}

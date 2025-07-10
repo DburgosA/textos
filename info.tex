@@ -1,0 +1,187 @@
+ \documentclass[10pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage[backend=biber,style=apa]{biblatex}
+\addbibresource{biblist.bib}
+\usepackage{mathpazo}  % Fuente Palatino
+
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\tcbuselibrary{listings, skins}
+
+\newtcblisting{summaryR}{
+    colback=gray!5,
+    colframe=gray!50,
+    listing only,
+    listing options={
+        basicstyle=\ttfamily\small,
+        breaklines=true,
+        columns=fullflexible,
+        keepspaces=true,
+        literate={\$}{{\$}}1,
+    },
+    boxrule=0.5pt,
+    arc=4pt,
+    left=2pt,
+    right=2pt,
+    top=2pt,
+    bottom=2pt,
+}
+
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{2.5 cm}{2.5 cm} {1 cm}{1.5 cm}{1 cm}{1.5 cm}
+%\setmarginsrb{leftmargin}{topmargin}{rightmargin}{bottommargin}{headheight}{headsep}{footheight}{footskip}
+
+
+\title{Universidad Catolica de Temuco}		% Title
+\date{\today}							% Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\figurename}{Figura }
+\begin{titlepage}
+	\centering
+    \includegraphics[width=0.8\linewidth]{images/Logo_ing_civil_informatica.png}\\[1.0 cm]
+    \textsc{\LARGE Universidad Catolica de Temuco}\\[2.0 cm]
+	\textsc{\Large INFO1169}\\[0.5 cm]
+	\textsc{\large TEORÍA DE SISTEMAS}\\[0.5 cm]
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries Escasez de agua en zonas rurales del sur de Chile}\\
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+	
+ \begin{flushleft} \large
+    \emph{Autores:}\\
+    Daniel Felipe Peña Bascur\\
+    Daniel Burgos\\
+    Jorge Soto\\
+ \end{flushleft}
+ 
+  \begin{flushleft} \large
+    \emph{Profesores:}\\
+	Elliott Jamil Mardones Arias \\
+  \end{flushleft}
+  
+  \vfill
+
+  {\large \thedate}
+
+\end{titlepage}
+
+\pagebreak
+
+\section{Resumen}
+
+La escasez de agua es un fenómeno creciente que afecta a diversas regiones del sur de Chile, especialmente a comunidades rurales dependientes de fuentes naturales para el abastecimiento de agua potable. Este problema se ha intensificado por el cambio climático, la disminución de precipitaciones y el uso intensivo del recurso hídrico por actividades agrícolas y forestales.
+
+El presente proyecto tiene como objetivo modelar la dinámica de este problema mediante simulaciones en Vensim, identificando las principales variables involucradas y su interacción a lo largo del tiempo. A través del enfoque de dinámica de sistemas, se analizan los efectos de políticas de mitigación como la implementación de sistemas de captación de aguas lluvias y la regulación del consumo agrícola.
+
+Los resultados preliminares del modelo indican que, en ausencia de intervención, la disponibilidad de agua en zonas rurales disminuirá significativamente en los próximos años. En cambio, la implementación de estrategias de mitigación puede estabilizar el sistema, reducir la migración rural por falta de recursos, y mejorar el acceso al agua potable.
+
+Este estudio contribuye al diseño de soluciones sostenibles para enfrentar la crisis hídrica en el sur de Chile, entregando herramientas de análisis que pueden ser utilizadas en el diseño de políticas públicas y planificación territorial.
+\section{Introduccion}
+Durante la última década, diversas regiones del sur de Chile han enfrentado una creciente escasez de agua que afecta principalmente a comunidades rurales. La disminución sostenida de las precipitaciones, atribuida en parte al cambio climático, junto con el aumento en la demanda de agua por parte del sector agrícola y forestal, han generado un desequilibrio en la disponibilidad de este recurso esencial. Esta situación ha derivado en dificultades para el abastecimiento de agua potable, pérdida de productividad agrícola, y un incremento en los niveles de vulnerabilidad social, incluyendo la migración desde zonas rurales hacia centros urbanos.
+
+La región de La Araucanía, en particular, ha experimentado una fuerte disminución en su acceso a fuentes naturales de agua, afectando a numerosos Sistemas de Agua Potable Rural (APR), los cuales son esenciales para el suministro hídrico de las poblaciones más aisladas. A pesar de los esfuerzos institucionales, muchas comunidades siguen enfrentando racionamientos, transporte de agua en camiones aljibe y falta de infraestructura resiliente.
+
+Frente a esta problemática, la dinámica de sistemas se presenta como una herramienta metodológica eficaz para comprender el comportamiento del sistema hídrico rural en el tiempo. Este enfoque permite identificar las relaciones causales entre las variables que componen el problema, analizar bucles de retroalimentación y simular escenarios futuros considerando distintos tipos de intervenciones.
+
+El presente estudio tiene como propósito modelar y simular la escasez de agua en comunidades rurales del sur de Chile, utilizando la herramienta Vensim. A partir de un análisis de variables clave —como la precipitación anual, el consumo agrícola y doméstico, y la capacidad de captación de aguas lluvias— se construirá un modelo que permita comprender la evolución del sistema y evaluar posibles soluciones sostenibles. Esta aproximación busca no solo diagnosticar el problema, sino también ofrecer evidencia que oriente la formulación de políticas públicas efectivas y adaptadas al contexto territorial.
+
+\section{Marco Teórico}
+
+La escasez de agua es un fenómeno multidimensional que involucra factores climáticos, sociales, económicos y tecnológicos. Su análisis requiere una comprensión tanto de los fundamentos del ciclo hidrológico como de las herramientas de modelación que permiten simular su evolución en el tiempo. En esta sección se presentan los principales conceptos abordados en este trabajo.
+
+\subsection{Ciclo Hidrológico y Cambio Climático}
+
+El ciclo hidrológico describe el movimiento continuo del agua en la Tierra a través de procesos como la evaporación, condensación, precipitación e infiltración. En los últimos años, el cambio climático ha alterado este ciclo, reduciendo la frecuencia e intensidad de las precipitaciones en diversas zonas del sur de Chile. Esta modificación ha contribuido a la disminución de fuentes superficiales y subterráneas de agua, afectando especialmente a comunidades rurales que dependen de ellas para consumo humano y actividades productivas~\parencite{mop2019,cr2}.
+
+\subsection{Sistemas de Agua Potable Rural (APR)}
+
+Los Sistemas de Agua Potable Rural (APR) son infraestructuras comunitarias que permiten distribuir agua en localidades donde no existe cobertura urbana. Estos sistemas enfrentan múltiples desafíos, entre ellos la baja disponibilidad de fuentes hídricas, escasa mantención, y una creciente demanda poblacional. En contextos de sequía prolongada, los APR se vuelven insostenibles, generando dependencia de soluciones transitorias como camiones aljibe~\parencite{dgapublic2023}.
+\subsection{Dinámica de Sistemas}
+La dinámica de sistemas es un enfoque de modelación desarrollado por Jay Forrester que permite estudiar el comportamiento de sistemas complejos a lo largo del tiempo. Se basa en la identificación de variables clave, relaciones causales, bucles de retroalimentación y acumuladores, los cuales se representan gráficamente mediante diagramas de Forrester. Esta herramienta es especialmente útil para analizar problemas con múltiples interacciones y retardos temporales, como la escasez de agua~\parencite{sterman2000}.
+\subsection{Variables y Retroalimentaciones}
+En el caso de la escasez hídrica rural, las variables principales incluyen la precipitación anual, el consumo agrícola y doméstico, la disponibilidad de fuentes naturales, y la inversión en tecnologías de captación. Los bucles de retroalimentación pueden ser positivos (por ejemplo, mayor escasez genera migración, lo que reduce la demanda) o negativos (como el aumento de captación de aguas lluvias que mejora el suministro). Identificar estos bucles es clave para proponer intervenciones efectivas.
+\subsection{Simulación con Vensim}
+Vensim es un software especializado en la construcción de modelos de dinámica de sistemas. Permite representar gráficamente las relaciones entre variables, definir ecuaciones matemáticas y realizar simulaciones en distintos escenarios. Su aplicación en este proyecto facilita la visualización del impacto de políticas de mitigación, como la implementación de sistemas de recolección de aguas lluvias o la regulación del consumo agrícola, sobre la disponibilidad de agua en el largo plazo~\parencite{vensimdocs}.
+\section{Desarrollo e Implementación}
+En esta sección se define el problema central del estudio, se identifican las variables principales involucradas en el sistema, se construye el modelo conceptual basado en dinámica de sistemas, y se presentan las simulaciones correspondientes.
+\subsection{Definición del Problema}
+La escasez de agua en comunidades rurales del sur de Chile representa una amenaza creciente para la seguridad hídrica, la salud pública y la sostenibilidad territorial. La disminución de las precipitaciones, el aumento de la demanda agrícola y la insuficiencia de infraestructura de captación y distribución generan un desequilibrio en la oferta y demanda del recurso hídrico~\parencite{cr2,mop2019}.
+
+\subsection{Variables del Sistema}
+
+Las principales variables consideradas en este estudio son:
+
+\begin{itemize}
+    \item \textbf{Precipitación anual (mm):} refleja la entrada natural de agua al sistema.
+    \item \textbf{Consumo agrícola (litros/mes):} volumen utilizado por cultivos y ganadería.
+    \item \textbf{Consumo humano rural (litros/mes):} demanda por parte de comunidades.
+    \item \textbf{Disponibilidad de fuentes naturales (litros):} nivel de aguas subterráneas o superficiales accesibles.
+    \item \textbf{Población rural dependiente del APR:} cantidad de personas afectadas por escasez.
+    \item \textbf{Inversión en sistemas de captación de aguas lluvias:} políticas o proyectos implementados para aumentar la oferta hídrica~\parencite{dgapublic2023}.
+\end{itemize}
+\subsection{Relaciones Causales y Retroalimentaciones}
+Se identifican dos tipos principales de bucles de retroalimentación:
+\begin{itemize}
+    \item \textbf{Bucle positivo de degradación:} una menor disponibilidad de agua reduce la productividad agrícola, lo que provoca migración rural, disminución de la inversión y abandono de infraestructura, lo que refuerza el deterioro del sistema.
+    \item \textbf{Bucle negativo de mitigación:} el aumento en la inversión en captación de aguas lluvias incrementa la oferta, mejora el acceso y reduce la presión sobre fuentes naturales~\parencite{sterman2000}.
+\end{itemize}
+\subsection{Diagrama de Forrester Conceptual}
+El modelo se basa en un diagrama causal con acumuladores que representan la disponibilidad total de agua, los flujos de entrada (precipitaciones, captación) y salida (consumo agrícola y humano). Este diagrama fue implementado utilizando el software Vensim~\parencite{vensimdocs}. En la Figura~\ref{fig:forrester} se muestra un esquema simplificado del sistema.
+\subsection{Calibración y Datos Históricos}
+Para la calibración del modelo se utilizaron datos de precipitaciones anuales de la Dirección Meteorológica de Chile, consumo agrícola estimado por el INE y reportes de la Dirección de Obras Hidráulicas (DOH). Las unidades fueron normalizadas a tasas mensuales para permitir la simulación en un periodo de 10 años~\parencite{mop2019,dgapublic2023}.
+\subsection{Simulación del Estado Actual del Sistema}
+La simulación sin intervención muestra una tendencia decreciente en la disponibilidad de agua, con una caída significativa a partir del quinto año, especialmente en condiciones de sequía prolongada. La Figura~\ref{fig:simulacion_actual} presenta los resultados del escenario base, donde se observa la disminución progresiva de la disponibilidad del recurso.
+
+\section{Resultados}
+
+En esta sección se presentan los resultados obtenidos a partir de las simulaciones del sistema hídrico rural, tanto en su estado actual como bajo la implementación de una política de mitigación. El análisis compara la evolución de la disponibilidad de agua en el tiempo y los efectos esperados de la intervención propuesta.
+
+\subsection{Escenario Base: Sin Intervención}
+
+La simulación del sistema sin intervención evidencia una disminución sostenida en la disponibilidad de agua durante un período de 10 años. Este descenso está directamente relacionado con la reducción de precipitaciones y el constante aumento del consumo agrícola, lo que genera una presión insostenible sobre las fuentes naturales.
+
+En la Figura~\ref{fig:escenario_base}, se observa cómo la disponibilidad hídrica cae por debajo del umbral mínimo de seguridad a partir del quinto año, provocando escasez generalizada en los sistemas de Agua Potable Rural (APR) y fomentando la migración de familias hacia zonas urbanas~\parencite{dgapublic2023}.
+\subsection{Escenario de Intervención: Captación de Aguas Lluvias}
+
+La política propuesta consiste en la implementación gradual de sistemas de captación de aguas lluvias a nivel domiciliario, con financiamiento estatal y comunitario. Esta intervención aumenta la oferta hídrica disponible, reduciendo la dependencia de fuentes naturales.
+
+La simulación del escenario con intervención muestra una estabilización progresiva de la disponibilidad de agua, especialmente a partir del tercer año, cuando la mayoría de los hogares han instalado los sistemas de captación. En la Figura~\ref{fig:escenario_intervencion} se visualiza una curva ascendente moderada, con mejoras sostenidas en la capacidad de abastecimiento~\parencite{mop2019}.
+\subsection{Comparación de Escenarios}
+La Figura~\ref{fig:comparacion} presenta una comparación directa entre ambos escenarios. Se evidencia que la intervención mitiga de forma significativa la pérdida de agua disponible, logrando mantenerla por sobre los niveles mínimos de abastecimiento durante todo el periodo simulado.
+Estos resultados sugieren que, con una política de captación bien implementada, es posible revertir parcialmente la tendencia a la escasez y mejorar la resiliencia de las comunidades rurales frente a las condiciones climáticas adversas~\parencite{cr2,vensimdocs}.
+\section{Conclusiones}
+El presente estudio abordó la problemática de la escasez de agua en zonas rurales del sur de Chile, utilizando dinámica de sistemas como herramienta metodológica para modelar y simular su comportamiento en el tiempo. La aplicación de este enfoque permitió identificar las principales variables que inciden en la disponibilidad hídrica, tales como las precipitaciones, el consumo agrícola, la capacidad de captación y la inversión en infraestructura.
+
+Los resultados obtenidos mediante simulaciones en Vensim evidencian que, bajo un escenario sin intervención, la disponibilidad de agua tiende a disminuir de forma sostenida, generando consecuencias negativas para el abastecimiento de comunidades rurales. En cambio, la implementación de una política de captación de aguas lluvias domiciliarias contribuye significativamente a estabilizar el sistema, asegurando un suministro básico y reduciendo la presión sobre las fuentes naturales.
+
+Este trabajo demuestra que las herramientas de dinámica de sistemas no solo permiten comprender mejor la evolución de problemas complejos, sino que también son útiles para evaluar el impacto potencial de políticas públicas de mitigación. A través de modelos como el desarrollado en este estudio, es posible anticipar escenarios críticos, justificar decisiones estratégicas y promover soluciones sostenibles en el ámbito hídrico rural.
+
+Como línea futura, se recomienda ampliar el modelo incorporando factores socioeconómicos, como el costo de implementación de tecnologías de captación, la aceptación social de las soluciones propuestas y el papel de los gobiernos locales. Además, podría integrarse información espacial mediante sistemas de información geográfica (SIG) para adaptar las políticas a las particularidades de cada territorio.
+
+\printbibliography
+
+\end{document}

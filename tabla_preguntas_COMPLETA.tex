@@ -1,0 +1,485 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{array}
+\geometry{a4paper, margin=0.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{8pt}
+
+\title{Cuestionario de Optimización - Preguntas y Respuestas (COMPLETO)}
+\author{}
+\date{}
+
+\begin{document}
+
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+\maketitle
+
+\begin{longtable}{|>{\centering\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{14cm}|>{\centering\arraybackslash}p{2cm}|}
+\hline
+\textbf{ID} & \textbf{Pregunta} & \textbf{Respuesta} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{ID} & \textbf{Pregunta} & \textbf{Respuesta} \\
+\hline
+\endhead
+
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+P01 & El método de dos fases se aplica únicamente en problemas de minimización & Falso \\
+\hline
+P02 & En el algoritmo de recocido simulado se aceptan como soluciones posibles estados de energía más altos para tratar de salir de mínimos locales & Verdadero \\
+\hline
+P03 & La solución del problema de programación entera sin tomar en cuenta las restricciones de integridad se denomina relajación contínua & Verdadero \\
+\hline
+P04 & En un problema de ramificar y acotar es sencillo determinar la cantidad de memoria RAM que se utilizará & Falso \\
+\hline
+P05 & Si una función es convexa, cualquier mínimo o máximo local es también un mínimo o máximo global & Verdadero \\
+\hline
+P06 & Si x⋆ es un mínimo local y f(x) es continuamente diferenciable en Vx⋆, entonces ∇f(x⋆)≠0 & Falso \\
+\hline
+P07 & La actualización de t en el método de Barzilai-Borwein tiene como objetivo acelerar la convergencia a un punto crítico local & Verdadero \\
+\hline
+P08 & Un precio sombra positivo en un tablero final del método simplex implica que al hacer crecer el lado derecho de la restricción, el valor de la función objetivo siempre crecerá & Falso \\
+\hline
+P09 & En el algoritmo de recocido simulado la temperatura controla la duración del algoritmo & Falso \\
+\hline
+P10 & Una matriz es semidefinida positiva si y solo si todos sus valores propios son mayores o iguales a cero & Verdadero \\
+\hline
+P11 & La derivada numérica de una función es más precisa mientras más pequeño sea el valor de Δx, sin importar qué tan pequeño sea & Falso \\
+\hline
+P12 & Las variables de holgura se agregan cuando hay restricciones de tipo "mayor o igual que" & Falso \\
+\hline
+P13 & Dado que el gradiente de una función es el vector de derivadas parciales, es necesario que cada Δx sea diferente solo cuando las componentes de x son diferentes & Verdadero \\
+\hline
+P14 & La diferencia principal entre el algoritmo del gradiente descendente y el método de Newton es la utilización de la matriz hessiana en este último para determinar la dirección de búsqueda & Verdadero \\
+\hline
+P15 & Se dice que una función f(x) es convexa si para cualesquiera xa, xb y λ∈[0,1] se cumple f(λxa+(1−λ)xb)<λf(xa)+(1−λ)f(xb) & Falso \\
+\hline
+P16 & El conjunto de soluciones X\_f es el conjunto de las soluciones factibles del problema de programación lineal si todas las x\_f son factibles & Verdadero \\
+\hline
+P17 & La diferencia entre una solución óptima y una subóptima se debe a la forma de la función objetivo & Falso \\
+\hline
+P18 & Dadas las restricciones de no negatividad de un problema lineal de maximización, si la función objetivo resulta negativa, la solución es infactible & Falso \\
+\hline
+P19 & El precio sombra es el incremento del valor de la función objetivo al agregar variables de holgura o exceso & Falso \\
+\hline
+P20 & Una solución x⋆ de un NLP se define como un máximo local si ∀x∈Vx⋆∖x⋆, f(x⋆)>f(x) & Falso \\
+\hline
+P21 & El precio sombra es la sensibilidad a cambios en los lados derechos de las restricciones & Verdadero \\
+\hline
+P22 & En el algoritmo de colonia de abejas la función fitness para valores positivos de la función objetivo es una distribución de probabilidad & Falso \\
+\hline
+P23 & Al resolver un problema de programación lineal por fuerza bruta se debe guardar el máximo a cada iteración para compararlo con los demás valores & Falso \\
+\hline
+P24 & Al incrementar o reducir un recurso, se puede determinar que las variables básicas no cambiarán si el cambio total en la función objetivo dividido por el cambio en el recurso es igual al precio sombra & Verdadero \\
+\hline
+P25 & Si x⋆ es un mínimo local y f(x) es continuamente diferenciable en Vx⋆, entonces ∇f(x⋆)=0 & Verdadero \\
+\hline
+P26 & Un precio sombra negativo en un tablero final del método simplex implica que al hacer crecer el lado derecho de la restricción, el valor de la función objetivo decrece & Falso \\
+\hline
+P27 & En un problema generalizado de optimización se busca optimizar cualquier función de las variables de decisión establecida & Verdadero \\
+\hline
+P28 & Las variables de holgura se agregan cuando hay restricciones de tipo "menor o igual que" & Verdadero \\
+\hline
+P29 & En el método simplex, sacar una variable de decisión básica para introducir una variable de holgura/exceso siempre disminuye el valor de la función objetivo & Falso \\
+\hline
+P30 & La vecindad Vx⋆ se define como el conjunto de puntos en torno al óptimo de una función & Verdadero \\
+\hline
+P31 & Para resolver un problema de programación no lineal mediante multiplicadores de Lagrange debe resolverse un sistema con el gradiente de la función de Lagrange igualado a cero & Falso \\
+\hline
+P32 & El precio sombra es la sensibilidad del modelo a cambios en los parámetros de la función objetivo & Falso \\
+\hline
+P33 & Las variables de holgura se agregan en la función objetivo durante la primera fase & Falso \\
+\hline
+P34 & En un modelo de programación lineal, la función objetivo es una recta o plano que tiene el mismo valor para cualquier punto en el que se evalúe & Verdadero \\
+\hline
+P35 & La fase de reproducción de un algoritmo genético utilizado para maximizar un problema toma en consideración los individuos con menos mutaciones & Falso \\
+\hline
+P36 & El precio sombra es el incremento del valor de la función objetivo al agregar variables de holgura o exceso & Falso \\
+\hline
+P37 & La diferencia principal entre el gradiente descendente y el método de Newton es la utilización de la matriz hessiana para definir la dirección de búsqueda & Verdadero \\
+\hline
+P38 & Los algoritmos genéticos paralelos de grano fino no permiten el cruce entre individuos de vecindarios adyacentes & Falso \\
+\hline
+P39 & Para múltiples variables, el método de Lagrange debe calcular el gradiente de la función objetivo y de cada restricción por separado & Verdadero \\
+\hline
+P40 & El criterio de la hessiana 2×2 H(x)=f₁₁·f₂₂−f₁₂² solo puede usarse si la hessiana es simétrica & Verdadero \\
+\hline
+P41 & Cambiar una variable de decisión básica por una de holgura/exceso siempre reduce la función objetivo & Falso \\
+\hline
+P42 & Un precio sombra positivo siempre implica que aumentar el recurso incrementa la función objetivo & Falso \\
+\hline
+P43 & Si ∇²f(x⋆) es definida negativa y ∇f(x⋆)=0, entonces x⋆ es un mínimo local estricto & Falso \\
+\hline
+P44 & En un problema generalizado de optimización se optimiza cualquier función de las variables de decisión & Verdadero \\
+\hline
+P45 & El algoritmo ramificar y acotar establece cotas superiores e inferiores & Verdadero \\
+\hline
+P46 & El método simplex no es un algoritmo codicioso & Falso \\
+\hline
+P47 & El precio sombra es la derivada de la función objetivo respecto de una restricción & Verdadero \\
+\hline
+P48 & El precio sombra representa la utilidad marginal de un recurso & Verdadero \\
+\hline
+P49 & Un cruzamiento en algoritmo genético siempre genera dos hijos & Verdadero \\
+\hline
+P50 & El criterio H(x) no informa del tipo de punto crítico si la función es simétrica en el mismo & Verdadero \\
+\hline
+P51 & Una matriz es semidefinida negativa aunque alguno de sus valores propios sea mayor a cero & Falso \\
+\hline
+P52 & Una solución x⋆ es máximo local si f(x⋆)>f(x) ∀x∈Vx⋆∖\{x⋆\} & Falso \\
+\hline
+P53 & Si ΔFO/Δrecurso = precio sombra, las variables básicas no cambian & Verdadero \\
+\hline
+P54 & Las variables de holgura se agregan cuando hay restricciones "mayor o igual que" & Falso \\
+\hline
+P55 & La diferencia entre gradiente descendente y Barzilai–Borwein es solo la definición inicial de Δx & Falso \\
+\hline
+P56 & Con Lagrange se debe resolver un sistema con la hessiana igualada a cero & Falso \\
+\hline
+P57 & Las variables artificiales son básicas iniciales en restricciones "≥" en la primera fase del método de dos fases & Verdadero \\
+\hline
+P58 & La fila pivote se elige con el menor RHS/coeficiente (todos los coeficientes) de la columna pivote & Falso \\
+\hline
+P59 & En el algoritmo de colonia de abejas, las abejas espectadoras eligen la fuente probabilísticamente & Verdadero \\
+\hline
+P60 & Si la hessiana se anula, las condiciones suficientes de segundo orden no permiten clasificar el punto & Falso \\
+\hline
+P61 & Los GA paralelos de grano fino permiten cruzar individuos de vecindarios no adyacentes & Falso \\
+\hline
+P62 & En recocido simulado se pueden aceptar soluciones de mayor energía para escapar de mínimos locales & Verdadero \\
+\hline
+P63 & Resolver la versión sin integridad de un problema entero se llama relajación continua & Verdadero \\
+\hline
+P64 & En ramificar y acotar es fácil estimar la RAM necesaria & Falso \\
+\hline
+P65 & Si una función es convexa, cualquier óptimo local es global & Verdadero \\
+\hline
+P66 & Para un mínimo local con f diferenciable, necesariamente ∇f(x⋆)≠0 & Falso \\
+\hline
+P67 & Barzilai–Borwein ajusta t para acelerar la convergencia & Verdadero \\
+\hline
+P68 & El método de dos fases se usa cuando hay restricciones "≥" & Falso \\
+\hline
+P69 & Una matriz es semidefinida positiva si y solo si todos sus eigenvalores son ≥0 & Verdadero \\
+\hline
+P70 & En recocido simulado la temperatura controla la duración del algoritmo & Falso \\
+\hline
+P71 & La derivada numérica siempre mejora al reducir Δx & Falso \\
+\hline
+P72 & Cada Δx\_i debe cambiar solo si x\_i cambia & Verdadero \\
+\hline
+P73 & Una función es convexa si f(λxa+(1−λ)xb) < λf(xa)+(1−λ)f(xb) para todo λ & Falso \\
+\hline
+P74 & El conjunto X\_f es factible si todas las x\_f lo son & Verdadero \\
+\hline
+P75 & La diferencia entre óptimo y subóptimo se debe a la forma de la función objetivo & Falso \\
+\hline
+P76 & Si la función objetivo resulta negativa con variables no negativas, la solución es infactible & Falso \\
+\hline
+P77 & La fitness en colonia de abejas es una distribución de probabilidad & Falso \\
+\hline
+P78 & En fuerza bruta se guarda el máximo en cada iteración & Falso \\
+\hline
+P79 & Si ΔFO/Δrecurso = precio sombra, la función objetivo no cambia & Falso \\
+\hline
+P80 & Para un mínimo local con f diferenciable se cumple ∇f(x⋆)=0 & Verdadero \\
+\hline
+P81 & Un precio sombra negativo puede aparecer en el tablero final del simplex & Falso \\
+\hline
+P82 & La vecindad Vx⋆ es el conjunto de puntos a distancia ≤ε de x⋆ & Verdadero \\
+\hline
+P83 & La función objetivo es el producto interno C·X & Verdadero \\
+\hline
+P84 & El precio sombra es la derivada de una restricción saturada respecto a la FO & Falso \\
+\hline
+P85 & El precio sombra cambia al modificar coeficientes de la función objetivo & Falso \\
+\hline
+P86 & La validación es el proceso de prueba y depuración del modelo & Verdadero \\
+\hline
+P87 & La función objetivo es la combinación lineal de los recursos & Falso \\
+\hline
+P88 & En la segunda fase del método de dos fases la FO final siempre es cero & Falso \\
+\hline
+P89 & El precio sombra indica la utilidad de cambiar un recurso, no su costo & Verdadero \\
+\hline
+P90 & Al pivotear se obtiene el nuevo valor básico y su aporte marginal a la FO & Verdadero \\
+\hline
+P91 & RHS negativo viola las restricciones de no negatividad & Verdadero \\
+\hline
+P92 & El simplex termina cuando no hay coeficientes positivos en la FO & Falso \\
+\hline
+P93 & x⋆ es máximo global si f(x⋆) ≥ f(x) para todo x factible & Verdadero \\
+\hline
+P94 & Si un punto es mínimo local y la hessiana es continua, la hessiana allí será semidefinida negativa & Falso \\
+\hline
+P95 & Una heurística sacrifica precisión por velocidad & Verdadero \\
+\hline
+P96 & El teorema de Taylor aproxima funciones con derivadas sucesivas & Verdadero \\
+\hline
+P97 & Con coeficientes de FO negativos, el método gráfico da la solución más alejada del origen & Falso \\
+\hline
+P98 & La diferencia entre información determinística y probabilística es la presencia del azar & Verdadero \\
+\hline
+P99 & En la aproximación de Taylor la precisión depende sobre todo de Δx & Verdadero \\
+\hline
+P100 & Los multiplicadores de Lagrange son costos reducidos de la FO & Falso \\
+\hline
+P101 & La derivada numérica calcula la pendiente de la secante, no de la tangente exacta & Verdadero \\
+\hline
+P102 & Una función es cóncava si f(λxa+(1−λ)xb) ≤ λf(xa)+(1−λ)f(xb) & Falso \\
+\hline
+P103 & Las condiciones suficientes de segundo orden permiten decidir si un punto es mínimo o máximo local estricto & Verdadero \\
+\hline
+P104 & El método de dos fases se aplica cuando hay restricciones de tipo 'mayor o igual que'. & Verdadero \\
+\hline
+P105 & En un modelo de programación lineal, la función objetivo es el producto vectorial del vector de variables de decisión y el vector de coeficientes. & Verdadero \\
+\hline
+P106 & Un precio sombra positivo en un tablero final del método simplex implica que al hacer crecer el lado derecho de la restricción, el valor de la función objetivo siempre crecerá. & Falso \\
+\hline
+P107 & El precio sombra es la sensibilidad a cambios en los lados derechos de las restricciones. & Verdadero \\
+\hline
+P108 & El precio sombra es la derivada de una restricción saturada con respecto a la función objetivo. & Falso \\
+\hline
+P109 & Supongamos que el coeficiente más negativo de la primera fila en una iteración del método simplex para un problema de maximización corresponde a una variable de holgura o de exceso, y la fila pivote corresponde a una variable de decisión. Por tanto, el debería sacarse del grupo de variables básicas a la variable de decisión e introducir al mismo la respectiva variable de holgura/exceso. No obstante, no debe hacerse este cambio pues la función objetivo disminuiría en valor. & Falso \\
+\hline
+P110 & Al incrementar/reducir un recurso, se puede asegurar que el valor de la función objetivo no cambiará si el cambio total en la función objetivo dividido por el cambio en el recurso es igual al precio sombra. & Falso \\
+\hline
+P111 & La fila pivote se selecciona a partir del menor valor que se obtiene al dividir el lado derecho de las restricciones por los coeficientes de la columna pivote. & Falso \\
+\hline
+P112 & Las variables de holgura se agregan cuando hay restricciones de tipo 'mayor o igual que'. & Falso \\
+\hline
+P113 & El precio sombra es la sensibilidad del modelo a cambios en los parámetros de la función objetivo. & Falso \\
+\hline
+P114 & El precio sombra es el incremento del valor de la función objetivo al modificar los coeficientes de la misma. & Falso \\
+\hline
+P115 & La validación es el proceso de prueba y depuración del modelo matemático. & Verdadero \\
+\hline
+P116 & En un modelo de programación lineal, la función objetivo es la combinación lineal de los recursos. & Falso \\
+\hline
+P117 & El método de dos fases obligatoriamente tiene cero como valor final de la función objetivo en la segunda fase. & Falso \\
+\hline
+P118 & Las variables de holgura se agregan cuando hay restricciones de tipo 'menor o igual que'. & Verdadero \\
+\hline
+P119 & La interpretación del precio sombra impone al 'propietario' del problema la cuestión sobre el incremento/reducción de uno de los recursos, pero no expone el costo de realizar este incremento. & Verdadero \\
+\hline
+P120 & El precio sombra es la derivada de la función objetivo con respecto a una restricción. & Verdadero \\
+\hline
+P121 & Al pivotear sobre una columna pivote, lo que estamos es determinando el valor de la nueva variable básica y su aporte marginal a la función objetivo. & Verdadero \\
+\hline
+P122 & Ningún coeficiente del lado derecho de las restricciones puede ser negativo porque esto violaría las restricciones de no negatividad del modelo. & Verdadero \\
+\hline
+P123 & En un modelo de programación lineal, la función objetivo es una recta o plano que tiene el mismo valor para cualquier punto en el que se evalúe. & Verdadero \\
+\hline
+P124 & La diferencia entre el método básico del gradiente descendente y el de actualización de t por el método de Barzilai-Borwein radica en la definición inicial del paso de salto Δx. & Falso \\
+\hline
+P125 & Si una función es convexa, cualquier mínimo o máximo local es también un mínimo o máximo global. & Verdadero \\
+\hline
+P126 & El proceso de estudio de la solución obtenida, evaluando la flexibilidad de la misma con respecto a los parámetros suministrados al modelo matemático se denomina validación de la solución. & Falso \\
+\hline
+P127 & Para que un punto x⋆ sea considerado como un máximo global, no debe cumplirse que f(x⋆)≥f(x),∀x∈Rn. & Falso \\
+\hline
+P128 & Dadas las restricciones de no negatividad de un problema lineal de maximización, si la función objetivo tiene como resultado un valor negativo, esta solución es infactible. & Falso \\
+\hline
+P129 & Al resolver un problema de programación no lineal por el método de fuerza bruta, la complejidad del problema depende del número de volúmenes en que se subdivide la región factible. & Verdadero \\
+\hline
+P130 & El precio sombra es el incremento del valor de la función objetivo al agregar variables de holgura o exceso. & Falso \\
+\hline
+P131 & Suponga que ∇²f(x) es continua en Vx⋆, que ∇f(x⋆)=0 y que ∇²f(x⋆) es definida negativa, entonces x⋆ es un mínimo local estricto de f(x⋆). & Falso \\
+\hline
+P132 & Una función puede ser cóncava y convexa en Vx⋆, si x⋆ es un punto crítico. & Verdadero \\
+\hline
+P133 & Debido a las condiciones suficientes de segundo orden si la matriz hessiana se anula en el punto evaluado no es posible determinar si es un mínimo o máximo local estricto. & Falso \\
+\hline
+P134 & Las variables artificiales se agregan para poder tener coeficientes negativos en la función objetivo en las restricciones de tipo 'mayor o igual que' en la primera fase del modelo de dos fases. & Verdadero \\
+\hline
+P135 & En un problema generalizado de optimización se busca optimizar cualquier función de las variables de decisión establecida. & Verdadero \\
+\hline
+P136 & El método de dos fases se aplica únicamente en problemas de minimización. & Falso \\
+\hline
+P137 & El criterio H(x)=∂²f(x)/∂x₁²⋅∂²f(x)/∂x₂²−(∂²f(x)/∂x₁∂x₂)² para matrices hessianas 2x2 solo puede utilizarse si estas matrices son simétricas. & Verdadero \\
+\hline
+P138 & Una heurística sacrifica precisión por velocidad. & Verdadero \\
+\hline
+P139 & Un precio sombra negativo en un tablero final del método simplex implica que al hacer crecer el lado derecho de la restricción, el valor de la función objetivo decrece. & Falso \\
+\hline
+P140 & El teorema de Taylor es una aproximación de una función a partir de sus derivadas. & Verdadero \\
+\hline
+P141 & Al resolver un problema de maximización de programación lineal por el método gráfico, siendo negativos todos los coeficientes de la función objetivo, la solución se encontrará en el punto más alejado al origen del sistema de coordenadas. & Falso \\
+\hline
+P142 & La diferencia entre información determinística y probabilistica es la presencia del azar. & Verdadero \\
+\hline
+P143 & La aproximación de la función estudiada por el teorema de Taylor se realiza en Vx, por lo que el principal factor en la precisión de la aproximación será Δx. & Verdadero \\
+\hline
+P144 & Los multiplicadores de Lagrange se interpretan como los costos reducidos de la función objetivo. & Falso \\
+\hline
+P145 & La derivada explicita se define como la pendiente de la tangente a f(x) en x. La definición de derivada numérica usada en el curso no corresponde exactamente a esta definición, pues en realidad busca el valor de la pendiente de la secante a f(x) en x. & Verdadero \\
+\hline
+P146 & Se dice que una función f(x) es concava si, para cada xa y xb, y para cada λ∈[0,1], f(λxa+(1−λ)xb)≤λf(xa)+(1−λ)f(xb). & Falso \\
+\hline
+P147 & La derivada numérica de una función es más precisa mientras más pequeño sea el valor de Δx, sin importar que tan pequeño sea el mismo. & Falso \\
+\hline
+P148 & Las condiciones suficientes de segundo orden permiten determinar cuando un punto es un mínimo o máximo local estricto de una función. & Verdadero \\
+\hline
+P149 & En la forma definida en clases, el método simplex itera hasta que no encuentra valores positivos en los coeficientes de la función objetivo. & Falso \\
+\hline
+P150 & Una solución x⋆ de un problema de programación no lineal se define como un máximo global si f(x⋆)≥f(xf),∀x∈Rn. & Verdadero \\
+\hline
+P151 & Las condiciones necesarias de segundo orden establecen que si un punto evaluado es un mínimo y la matriz hessiana existe y es continua en la vecindad de ese punto, entonces la matriz hessiana evaluada en ese punto será semidefinida negativa. & Falso \\
+\hline
+P152 & Para resolver un problema de programación no lineal mediante el método de los multiplicadores de Lagrange debe resolverse un sistema de ecuaciones con la matriz hessiana igualada a cero. & Falso \\
+\hline
+P153 & La diferencia principal entre el algoritmo del gradiente descendente y el método de Newton es la utilización de la matriz hessiana en este último para determinar la dirección de búsqueda del punto óptimo. & Verdadero \\
+\hline
+P154 & Las variables artificiales son las variables básicas de inicio en las restricciones de tipo 'mayor o igual que' en la primera fase del método de dos fases. & Verdadero \\
+\hline
+P155 & La fase de reproducción de un algoritmo genético utilizado para maximizar un problema toma en consideración los individuos con menos mutaciones para identificar nuevas soluciones. & Falso \\
+\hline
+P156 & Una matriz es indefinida cuando alguno de sus valores propios sea igual a cero. & Falso \\
+\hline
+P157 & En un algoritmo de colonias de hormigas cada hormiga toma una decisión probabilística proporcional únicamente a las feromonas acumuladas para cada opción. & Falso \\
+\hline
+P158 & Los cromosomas para los algoritmos genéticos corresponden a un valor de un gen en un individuo. & Falso \\
+\hline
+P159 & En un algoritmo genético, los cromosomas con mayor aptitud son siempre los padres de la nueva generación. & Falso \\
+\hline
+P160 & En un problema de programación no lineal las soluciones se encuentran en los vértices de la región factible. & Falso \\
+\hline
+P161 & En el algoritmo de colonia de abejas las abejas espectadoras determinan probabilísticamente la fuente a explorar. & Verdadero \\
+\hline
+P162 & Al resolver un problema de maximización de programación lineal por el método gráfico, siendo positivos todos los coeficientes de la función objetivo y teniendo dos restricciones de tipo mayor o igual que, el problema es factible. & Verdadero \\
+\hline
+P163 & Para poder aplicar el método de los multiplicadores de Lagrange es necesario convertir las desigualdades de las restricciones en igualdades, agregando variables de holgura o exceso. & Verdadero \\
+\hline
+P164 & Al pivotar sobre una columna pivote, lo que estamos es determinando el valor de la nueva variable básica y su aporte marginal a la función objetivo. & Verdadero \\
+\hline
+P165 & Una matriz es semidefinida positiva si y sólo si todos su valores propios son mayores o iguales a cero. & Verdadero \\
+\hline
+P166 & Al resolver un problema de programación no lineal por el método de fuerza bruta, la complejidad del problema depende del número de volúmenes en que se subdivide la región factible. & Verdadero \\
+\hline
+P167 & Las condiciones necesarias de segundo orden se usan para determinar cuando el gradiente se anula en el óptimo y, a la vez, cuando la matriz hessiana es semidefinida positiva o negativa (dependiendo de si es un mínimo o un máximo). & Verdadero \\
+\hline
+P168 & La actualización de t en el método de Barzilai-Borwein tiene como objetivo acelerar la convergencia a un punto crítico local. & Verdadero \\
+\hline
+P169 & El teorema de Taylor es una aproximación de una función a partir de sus derivadas. & Verdadero \\
+\hline
+P170 & El método de dos fases obligatoriamente tiene cero como valor final de la función objetivo en la segunda fase. & Falso \\
+\hline
+P171 & Al incrementar/reducir un recurso, se puede asegurar que el valor de la función objetivo no cambiará si el cambio total en la función objetivo dividido por el cambio en el recurso es igual al precio sombra. & Falso \\
+\hline
+P172 & El precio sombra es el incremento del valor de la función objetivo al modificar los coeficientes de la misma. & Falso \\
+\hline
+P173 & El criterio para matrices hessianas 2x2 solo puede utilizarse si estas matrices son simétricas. & Verdadero \\
+\hline
+P174 & La derivada numérica de una función es más precisa mientras más pequeño sea el valor de Δx, sin importar que tan pequeño sea el mismo. & Falso \\
+\hline
+P175 & El método simplex no es un algoritmo greedy (codicioso). & Falso \\
+\hline
+P176 & Las variables de holgura se agregan cuando hay restricciones de tipo 'menor o igual que'. & Verdadero \\
+\hline
+P177 & Para probar que una función tiene un óptimo global solo es necesario probar que ésta es convexa. & Falso \\
+\hline
+P178 & Ningún coeficiente del lado derecho de las restricciones puede ser negativo porque esto violaría las restricciones de no negatividad del modelo. & Verdadero \\
+\hline
+P179 & Las condiciones suficientes de segundo orden permiten determinar cuando un punto es un mínimo o máximo local estricto de una función. & Verdadero \\
+\hline
+P180 & Una matriz es semidefinida negativa aunque alguno de sus valores propios sea mayor a cero. & Falso \\
+\hline
+P181 & El precio sombra es la derivada de la función objetivo con respecto a una restricción. & Verdadero \\
+\hline
+P182 & La vecindad Vx* se define como el conjunto de puntos en torno al óptimo de una función. & Verdadero \\
+\hline
+P183 & Las variables de holgura se agregan en la función objetivo durante la primera fase. & Falso \\
+\hline
+P184 & El precio sombra solo se puede observar en restricciones saturadas. & Verdadero \\
+\hline
+P185 & En un modelo de programación lineal, la función objetivo es la combinación lineal de los recursos. & Falso \\
+\hline
+P186 & Dadas las restricciones de no negatividad de un problema lineal de maximización, si la función objetivo tiene como resultado un valor negativo, esta solución es infactible. & Falso \\
+\hline
+P187 & Para resolver un problema de programación no lineal mediante el método de los multiplicadores de Lagrange debe resolverse un sistema de ecuaciones con la matriz hessiana igualada a cero. & Falso \\
+\hline
+P188 & En un problema de programación no lineal las soluciones se encuentran en los vértices de la región factible. & Falso \\
+\hline
+P189 & La fila pivote se selecciona a partir del menor valor que se obtiene al dividir el lado derecho de las restricciones por los coeficientes de la columna pivote. & Falso \\
+\hline
+P190 & Si x⋆ es un mínimo local y f(x) es continuamente diferenciable en Vx⋆, entonces ∇f(x⋆)=0. & Verdadero \\
+\hline
+P191 & Al resolver un problema de programación lineal por fuerza bruta se debe guardar el máximo a cada iteración para hacer compararlo con los valores de los demás volúmenes. & Falso \\
+\hline
+P192 & La validación es el proceso de prueba y depuración del modelo matemático. & Verdadero \\
+\hline
+P193 & El precio sombra es la utilidad marginal de un recurso. & Verdadero \\
+\hline
+P194 & En un modelo de programación lineal, la función objetivo es una recta o plano que tiene el mismo valor para cualquier punto en el que se evalúe. & Verdadero \\
+\hline
+P195 & Una función puede ser cóncava y convexa en V\_x\^{}⋆, si x\^{}⋆ es un punto crítico. & Verdadero \\
+\hline
+P196 & Las variables artificiales se agregan para poder tener coeficientes negativos en la función objetivo en las restricciones de tipo 'mayor o igual que' en la primera fase del modelo de dos fases. & Verdadero \\
+\hline
+P197 & Una solución x\^{}⋆ de un problema de programación no lineal se define como un máximo global si f(x\^{}⋆)≥f(x) para todo x factible. & Verdadero \\
+\hline
+P198 & El método simplex garantiza que la solución óptima se encuentra en un vértice de la región factible. & Verdadero \\
+\hline
+P199 & Una matriz es semidefinida negativa si y sólo si xᵀMx≤0, ∀x∈ℝⁿ∖\{0\}. & Verdadero \\
+\hline
+P200 & La diferencia entre información determinística y probabilística es la presencia del azar. & Verdadero \\
+\hline
+P201 & La derivada explícita se define como la pendiente de la tangente a f(x) en x. La definición de derivada numérica usada en el curso no corresponde exactamente a esta definición, pues en realidad busca el valor de la pendiente de la secante a f(x) en x. & Verdadero \\
+\hline
+P202 & El método de dos fases se aplica cuando no hay restricciones de tipo 'mayor o igual que'. & Falso \\
+\hline
+P203 & La aproximación de la función estudiada por el teorema de Taylor se realiza en V\_x, por lo que el principal factor en la precisión de la aproximación será Δx. & Verdadero \\
+\hline
+P204 & Se dice que una función f(x) es cóncava si, para cada x\_a y x\_b, y para cada λ∈[0,1], f(λx\_a+(1−λ)x\_b)≤λf(x\_a)+(1−λ)f(x\_b). & Falso \\
+\hline
+P205 & La matriz hessiana puede ser usada para determinar el tipo de punto crítico encontrado. & Verdadero \\
+\hline
+P206 & Las variables artificiales son las variables básicas de inicio en las restricciones de tipo 'mayor o igual que' en la primera fase del método de dos fases. & Verdadero \\
+\hline
+P207 & La matriz hessiana es una matriz de derivada parciales de segundo orden de una función continuamente diferenciable dos veces con respecto a pares de variables. Por tanto, sabemos que es la matriz hessiana es una matriz simétrica. & Verdadero \\
+\hline
+P208 & La interpretación del precio sombra impone al 'propietario' del problema la cuestión sobre el incremento/reducción de uno de los recursos, pero no expone el costo de realizar este incremento. & Verdadero \\
+\hline
+P209 & Los multiplicadores de Lagrange se interpretan como los costos reducidos de la función objetivo. & Falso \\
+\hline
+P210 & Se dice que una función f(x) es convexa si, para cada x\_a y x\_b, y para cada λ∈[0,1], f(λx\_a+(1−λ)x\_b)<λf(x\_a)+(1−λ)f(x\_b). & Falso \\
+\hline
+P211 & Para el caso de múltiples variables, el método de los multiplicadores de Lagrange debe calcular tanto el gradiente de la función objetivo como el gradiente de cada restricción por separado. & Verdadero \\
+\hline
+P212 & Si x⋆ es un mínimo local y f(x) es continuamente diferenciable en Vx⋆, entonces ∇f(x⋆)≠0. & Falso \\
+\hline
+P213 & En un modelo de programación lineal, la función objetivo es el producto vectorial del vector de variables de decisión y el vector de coeficientes. & Verdadero \\
+\hline
+P214 & El criterio H(x)=∂²f(x)/∂x₁²⋅∂²f(x)/∂x₂²−(∂²f(x)/∂x₁∂x₂)² para matrices hessianas 2x2 es incapaz de dar información sobre un punto crítico si la función es simétrica con respecto a las variables en el mismo. & Verdadero \\
+\hline
+P215 & Al resolver un problema de minimización de programación lineal por el método gráfico, buscamos el vértice de la región factible más cercano al origen del sistema de coordenadas. & Falso \\
+\hline
+P216 & Cuando en el método de Newton se evalúa ∥∇x\_\{n+1\}∥<∥∇x\_n∥, se establece, implícitamente, que lo que se busca es un máximo. & Falso \\
+\hline
+P217 & La diferencia entre una solución óptima y una subóptima se debe a la forma de la función objetivo. & Falso \\
+\hline
+P218 & Dado que el gradiente de una función es el vector de derivada parciales de la función con respecto a cada una de las variables, y el problema de redondeo al calcular la derivada numérica, es necesario que cada valor del vector delta x sea diferente únicamente cuando las componentes del vector x son diferentes. & Verdadero \\
+\hline
+P219 & Si una función es convexa, cualquier mínimo o máximo local es también un mínimo o máximo global. & Verdadero \\
+\hline
+P220 & En el siguiente tablero final de un modelo resuelto por el método simplex, las holgura menos rentable es la correspondiente a la restricción 2. & Falso \\
+\hline
+
+\end{longtable}
+
+\end{document}
